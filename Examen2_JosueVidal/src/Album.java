@@ -11,12 +11,12 @@ import java.util.ArrayList;
  *
  * @author josue
  */
-public class Album implements Serializable{
+public class Album implements Serializable {
 
     private String nombre;
     private String artista;
     private ArrayList<Cancion> canciones = new ArrayList();
-    
+
     private static final long SerialVersionUID = 777L;
 
     public Album(String nombre, String artista) {
@@ -46,6 +46,11 @@ public class Album implements Serializable{
 
     public void setCanciones(ArrayList<Cancion> canciones) {
         this.canciones = canciones;
+    }
+
+    @Override
+    public String toString() {
+        return nombre;
     }
 
 }

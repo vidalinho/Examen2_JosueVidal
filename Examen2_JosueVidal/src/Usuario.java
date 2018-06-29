@@ -1,4 +1,6 @@
 
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -76,5 +78,5 @@ public class Usuario implements Serializable{
     public void setFavoritos(ArrayList favoritos) {
         this.favoritos = favoritos;
     }
-
+   
 }
