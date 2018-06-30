@@ -27,6 +27,7 @@ public class Principal extends javax.swing.JFrame {
      */
     public Principal() {
         initComponents();
+        JOptionPane.showMessageDialog(this, "No se te olvide cargar el archivo al principio y guardarlo al realizar cambios.");
     }
 
     /**
@@ -132,6 +133,14 @@ public class Principal extends javax.swing.JFrame {
         jLabel23 = new javax.swing.JLabel();
         jScrollPane5 = new javax.swing.JScrollPane();
         jt_playlist = new javax.swing.JTree();
+        jd_verFavoritas = new javax.swing.JDialog();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jl_favoritas = new javax.swing.JList<>();
+        jButton22 = new javax.swing.JButton();
+        jd_produccion = new javax.swing.JDialog();
+        jlb_name = new javax.swing.JLabel();
+        pg_time = new javax.swing.JProgressBar();
+        jlb_time = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -583,6 +592,11 @@ public class Principal extends javax.swing.JFrame {
         });
 
         jButton16.setText("Ver favoritas");
+        jButton16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton16MouseClicked(evt);
+            }
+        });
 
         jButton17.setText("Salir");
 
@@ -905,9 +919,9 @@ public class Principal extends javax.swing.JFrame {
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel17Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel20)
-                .addGap(18, 18, 18)
+                .addGap(50, 50, 50)
+                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cb_explorarAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel22))
@@ -971,6 +985,74 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(33, 33, 33)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(97, Short.MAX_VALUE))
+        );
+
+        jScrollPane6.setViewportView(jl_favoritas);
+
+        jButton22.setText("Reproducir");
+        jButton22.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton22MouseClicked(evt);
+            }
+        });
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton22ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jd_verFavoritasLayout = new javax.swing.GroupLayout(jd_verFavoritas.getContentPane());
+        jd_verFavoritas.getContentPane().setLayout(jd_verFavoritasLayout);
+        jd_verFavoritasLayout.setHorizontalGroup(
+            jd_verFavoritasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_verFavoritasLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(jd_verFavoritasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton22)
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(48, Short.MAX_VALUE))
+        );
+        jd_verFavoritasLayout.setVerticalGroup(
+            jd_verFavoritasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_verFavoritasLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton22)
+                .addContainerGap(41, Short.MAX_VALUE))
+        );
+
+        jlb_name.setText("jLabel26");
+
+        jlb_time.setText("jLabel27");
+
+        javax.swing.GroupLayout jd_produccionLayout = new javax.swing.GroupLayout(jd_produccion.getContentPane());
+        jd_produccion.getContentPane().setLayout(jd_produccionLayout);
+        jd_produccionLayout.setHorizontalGroup(
+            jd_produccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_produccionLayout.createSequentialGroup()
+                .addGroup(jd_produccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jd_produccionLayout.createSequentialGroup()
+                        .addGap(77, 77, 77)
+                        .addComponent(pg_time, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jlb_time))
+                    .addGroup(jd_produccionLayout.createSequentialGroup()
+                        .addGap(244, 244, 244)
+                        .addComponent(jlb_name)))
+                .addContainerGap(48, Short.MAX_VALUE))
+        );
+        jd_produccionLayout.setVerticalGroup(
+            jd_produccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_produccionLayout.createSequentialGroup()
+                .addGap(62, 62, 62)
+                .addGroup(jd_produccionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jlb_time)
+                    .addGroup(jd_produccionLayout.createSequentialGroup()
+                        .addComponent(jlb_name)
+                        .addGap(34, 34, 34)
+                        .addComponent(pg_time, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(228, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -1335,19 +1417,15 @@ public class Principal extends javax.swing.JFrame {
     private void jButton19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton19MouseClicked
         // TODO add your handling code here:
         Cancion cancion = (Cancion) jl_canciones.getSelectedValue();
-        Playlist playlist =  jl_playlist.getSelectedValue();
+        Playlist playlist = jl_playlist.getSelectedValue();
         for (Playlist t : usuarios.get(pos).getPlaylists()) {
-            if(t.getNombre().equals(playlist.getNombre())){
-               Playlist temp = t;
-               temp.getCancionest().add(cancion);
+            if (t.getNombre().equals(playlist.getNombre())) {
+                Playlist temp = t;
+                temp.getCancionest().add(cancion);
                 usuarios.get(pos).getPlaylists().set(usuarios.get(pos).getPlaylists().indexOf(t), temp);
             }
         }
-        
-        System.out.println(pos);
-       
-        System.out.println(usuarios.get(pos).getPlaylists());
-        
+
     }//GEN-LAST:event_jButton19MouseClicked
 
     private void jButton14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton14MouseClicked
@@ -1380,7 +1458,44 @@ public class Principal extends javax.swing.JFrame {
         }
         model.reload();
         jt_playlist.setModel(model);
+        jd_verPlaylist.setModal(true);
+        jd_verPlaylist.pack();
+        jd_verPlaylist.setLocationRelativeTo(this);
+        jd_verPlaylist.setVisible(true);
+
+
     }//GEN-LAST:event_jButton15MouseClicked
+
+    private void jButton16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton16MouseClicked
+        DefaultListModel model = new DefaultListModel();
+        for (Cancion t : usuarios.get(pos).getFavoritos()) {
+            model.addElement(t);
+        }
+        jl_favoritas.setModel(model);
+     
+        jd_verFavoritas.setModal(true);
+        jd_verFavoritas.pack();
+        jd_verFavoritas.setLocationRelativeTo(this);
+        jd_verFavoritas.setVisible(true);
+    }//GEN-LAST:event_jButton16MouseClicked
+
+    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton22ActionPerformed
+
+    private void jButton22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton22MouseClicked
+        // TODO add your handling code here:
+        if(jl_favoritas.getSelectedIndex()<=0){
+         Cancion c = jl_favoritas.getSelectedValue();
+        jlb_name.setText(c.getNombre());
+        pg_time.setMaximum(c.getDuracion());
+        h = new Hilo(jlb_time, c.getDuracion(), pg_time);
+        h.start();
+        jd_produccion.setModal(true);
+        jd_produccion.pack();
+        jd_produccion.setVisible(true);
+        }
+    }//GEN-LAST:event_jButton22MouseClicked
 
     /**
      * @param args the command line arguments
@@ -1436,6 +1551,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -1490,19 +1606,26 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JDialog jd_album;
     private javax.swing.JDialog jd_canciones;
     private javax.swing.JDialog jd_login;
+    private javax.swing.JDialog jd_produccion;
     private javax.swing.JDialog jd_usuarios;
+    private javax.swing.JDialog jd_verFavoritas;
     private javax.swing.JDialog jd_verPlaylist;
     private javax.swing.JList<Cancion> jl_canciones;
+    private javax.swing.JList<Cancion> jl_favoritas;
     private javax.swing.JList<Playlist> jl_playlist;
+    private javax.swing.JLabel jlb_name;
+    private javax.swing.JLabel jlb_time;
     private javax.swing.JTable jt_canciones;
     private javax.swing.JTree jt_playlist;
     private javax.swing.JTable jt_usuarios;
+    private javax.swing.JProgressBar pg_time;
     private javax.swing.JPasswordField ps_contra;
     private javax.swing.JDialog submenu;
     private javax.swing.JTextField tf_artistaAlbum;
@@ -1520,6 +1643,7 @@ public class Principal extends javax.swing.JFrame {
     ArrayList<Usuario> usuarios = new ArrayList();
     ArrayList<Album> albumes = new ArrayList();
     ArrayList<Cancion> canciones = new ArrayList();
-    administrar admin = new administrar("/.Usuarios");
+    administrar admin = new administrar("./Usuarios.vidal");
     int pos;
+    Hilo h;
 }
