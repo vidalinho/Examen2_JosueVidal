@@ -25,12 +25,12 @@ public class administrar {
         this.Archvio = new File(path);
     }
 
-    public ArrayList<Usuario> getListaPersona() {
+    public ArrayList<Usuario> getListaUsuarios() {
         return listaUsuarios;
     }
 
-    public void setListaPersona(ArrayList<Usuario> listaPersona) {
-        this.listaUsuarios = listaPersona;
+    public void setListaUsuarios(ArrayList<Usuario> listaUsuarios) {
+        this.listaUsuarios = listaUsuarios;
     }
 
     public File getArchvio() {
@@ -41,14 +41,14 @@ public class administrar {
         this.Archvio = Archvio;
     }
 
-    public void setPersona(Usuario p) {
+    public void setUsuario(Usuario p) {
         this.listaUsuarios.add(p);
 
     }
 
     @Override
     public String toString() {
-        return "adminPersona{" + "listaPersona=" + listaUsuarios + '}';
+        return "administrar{" + "listaUsuarios=" + listaUsuarios + '}';
     }
 
     public void cargarArchivo() {

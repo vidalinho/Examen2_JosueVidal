@@ -19,9 +19,9 @@ public class Usuario implements Serializable{
     private int edad;
     private String username;
     private String password;
-    private ArrayList playlists = new ArrayList();
-    private ArrayList favoritos = new ArrayList();
-
+    private ArrayList<Playlist> playlists = new ArrayList<Playlist>();
+    private ArrayList<Cancion> favoritos = new ArrayList();
+   
     private static final long SerialVersionUID = 777L;
 
     public Usuario(String nombre, int edad, String username, String password) {
@@ -34,7 +34,7 @@ public class Usuario implements Serializable{
     public String getNombre() {
         return nombre;
     }
-
+    
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -63,20 +63,24 @@ public class Usuario implements Serializable{
         this.password = password;
     }
 
-    public ArrayList getPlaylists() {
+    public ArrayList<Playlist> getPlaylists() {
         return playlists;
     }
 
-    public void setPlaylists(ArrayList playlists) {
+    public void setPlaylists(ArrayList<Playlist> playlists) {
         this.playlists = playlists;
     }
 
-    public ArrayList getFavoritos() {
+    public ArrayList<Cancion> getFavoritos() {
         return favoritos;
     }
 
-    public void setFavoritos(ArrayList favoritos) {
+    public void setFavoritos(ArrayList<Cancion> favoritos) {
         this.favoritos = favoritos;
     }
+
+    
+
+    
    
 }

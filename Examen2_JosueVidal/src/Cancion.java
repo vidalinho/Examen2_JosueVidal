@@ -6,18 +6,17 @@ import java.io.Serializable;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author josue
  */
-public class Cancion implements Serializable{
+public class Cancion implements Serializable {
 
     private String nombre;
     private String artista;
     private int duracion;
     private String genero;
-    
+
     private static final long SerialVersionUID = 777L;
 
     public Cancion(String nombre, String artista, int duracion, String genero) {
@@ -31,6 +30,10 @@ public class Cancion implements Serializable{
         return nombre;
     }
 
+    public Cancion(Cancion cancion) {
+       
+    }
+    
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -61,7 +64,7 @@ public class Cancion implements Serializable{
 
     @Override
     public String toString() {
-        return "Cancion{" + "nombre=" + nombre + '}';
+        return nombre;
     }
 
 }
